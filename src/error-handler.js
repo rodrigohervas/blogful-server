@@ -6,11 +6,14 @@ function errorHandler(error, req, res, next) {
     let response
     if (NODE_ENV === 'production') {
         response = {
-            error: { message: "server error", status: 500 }
+            //error: { message: "server error", status: 500 }
+            //error: { message: error.message, status: error.status}
+            error: { message: 'personalized error', status: error.status}
         }
     }
     else {
-        logger.error(error.message)
+        //console.log('error: ', error.status + " - " + error.message)
+        logger.error(error)
         response = {
             error: { message: error.message, status: error.status ? error.status: 500 }
         }
