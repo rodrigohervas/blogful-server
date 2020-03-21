@@ -7,8 +7,7 @@ function errorHandler(error, req, res, next) {
     if (NODE_ENV === 'production') {
         response = {
             //error: { message: "server error", status: 500 }
-            //error: { message: error.message, status: error.status}
-            error: { message: 'personalized error', status: error.status}
+            error: { message: error.message, status: error.status}
         }
     }
     else {
