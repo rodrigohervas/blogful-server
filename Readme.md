@@ -28,3 +28,8 @@ Complete the following steps to start a new project (NEW-PROJECT-NAME):
 Start the application `npm start`
 
 Start nodemon for the application `npm run dev`
+
+
+## Live Site
+
+https://blogful-app.now.sh/
